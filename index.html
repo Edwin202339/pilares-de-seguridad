@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es" data-color-scheme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 Attacking and defending - Trabajo colaborativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Navigation -->
+        <nav class="nav-controls">
+            <button class="nav-btn" id="prevBtn">‹</button>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">8</span>
+            </div>
+            <button class="nav-btn" id="nextBtn">›</button>
+        </nav>
+
+        <!-- Progress bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="slide-indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+            <div class="indicator" data-slide="3"></div>
+            <div class="indicator" data-slide="4"></div>
+            <div class="indicator" data-slide="5"></div>
+            <div class="indicator" data-slide="6"></div>
+            <div class="indicator" data-slide="7"></div>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-wrapper">
+            <!-- Slide 1: Portada -->
+            <div class="slide active" data-slide="0">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 1: Portada</div>
+                    <div class="cover-slide">
+                        <div class="university-logo">🎓</div>
+                        <h1 class="main-title">Task 2 Attacking and defending - Trabajo colaborativo</h1>
+                        <h2 class="subtitle">Los Pilares Fundamentales de la Seguridad Informática</h2>
+                        
+                        <div class="authors">
+                            <h3>Presentado por:</h3>
+                            <ul class="author-list">
+                                <li>Edwin Pantoja Bustos</li>
+                                <li>Manuel Enrique Menéndez Olivares</li>
+                                <li>Hernando Arevalo Arevalo</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="institution">
+                            <p><strong>Universidad Nacional Abierta y a Distancia - UNAD</strong></p>
+                            <p>Programa: Ingeniería de Sistemas - Seguridad Informática</p>
+                            <p>Septiembre 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Pilares de la Seguridad Informática -->
+            <div class="slide" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 2</div>
+                    <h1>¿Cuáles son los pilares de la seguridad informática y explíquelos?</h1>
+                    <div class="author-credits">
+                        <div class="author-badge primary">Autor principal: Edwin Pantoja Bustos</div>
+                    </div>
+                    <!-- Etiquetas (tags) de Edwin que abren modales -->
+                    <div class="tags-row edwin-tags">
+                        <button class="tag-badge" data-modal-target="modal-resumen" data-modal-title="Resumen Ejecutivo">Resumen Ejecutivo</button>
+                        <button class="tag-badge" data-modal-target="modal-introduccion" data-modal-title="Introducción a la Seguridad Informática">Introducción</button>
+                        <button class="tag-badge" data-modal-target="modal-pilares" data-modal-title="Los Cinco Pilares Fundamentales">Pilares Fundamentales</button>
+                        <button class="tag-badge" data-modal-target="modal-marcos" data-modal-title="Marcos Internacionales de Referencia">Marcos Internacionales</button>
+                        <button class="tag-badge" data-modal-target="modal-implementacion" data-modal-title="Implementación y Mejores Prácticas">Implementación</button>
+                        <button class="tag-badge" data-modal-target="modal-casos" data-modal-title="Casos de Estudio y Lecciones Aprendidas">Casos y Lecciones</button>
+                        <button class="tag-badge" data-modal-target="modal-tendencias" data-modal-title="Tendencias Futuras y Tecnologías Emergentes">Tendencias</button>
+                        <button class="tag-badge" data-modal-target="modal-recomendaciones" data-modal-title="Recomendaciones Estratégicas">Recomendaciones</button>
+                        <button class="tag-badge" data-modal-target="modal-conclusiones" data-modal-title="Conclusiones y Llamado a la Acción">Conclusiones</button>
+                        <button class="tag-badge" data-modal-target="modal-manuel" data-modal-title="Aportes de Manuel Enrique Menéndez Olivares">Aportes de Manuel Enrique</button>
+                    </div>
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <div class="pillar-icon">🔒</div>
+                            <h3>Confidencialidad</h3>
+                            <p>Garantiza que la información solo sea accesible para personas, sistemas o procesos debidamente autorizados.</p>
+                            <div class="tech-examples">Tecnologías: AES, RSA, TLS/SSL, VPN</div>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon">✅</div>
+                            <h3>Integridad</h3>
+                            <p>Asegura que los datos no sean modificados, alterados o corrompidos sin autorización.</p>
+                            <div class="tech-examples">Tecnologías: SHA-256, Firmas digitales, HMAC</div>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon">⚡</div>
+                            <h3>Disponibilidad</h3>
+                            <p>Garantiza que los sistemas, servicios y datos estén accesibles cuando sean requeridos.</p>
+                            <div class="availability-levels">
+                                <div>99.9% - 8.77 horas downtime/año</div>
+                                <div>99.99% - 52.6 minutos downtime/año</div>
+                            </div>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon">🔐</div>
+                            <h3>Autenticación</h3>
+                            <p>Proceso de verificar la identidad de un usuario, dispositivo o sistema antes de permitir el acceso.</p>
+                            <div class="mfa-stat">99% de ataques prevenibles con MFA - Microsoft 2024</div>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon">👤</div>
+                            <h3>Autorización</h3>
+                            <p>Determina qué acciones puede realizar un usuario autenticado dentro de un sistema.</p>
+                            <div class="tech-examples">Modelos: RBAC, MAC, DAC, ABAC</div>
+                        </div>
+                        <div class="pillar-card no-repudiation">
+                            <div class="pillar-icon">📜</div>
+                            <h3>No Repudiación</h3>
+                            <p>Garantiza que emisor y receptor reconocen la información transmitida y aceptan su validez.</p>
+                            <div class="tech-examples">Tecnologías: Firmas digitales, PKI, Timestamps</div>
+                        </div>
+                    </div>
+                    <div class="statistics-highlight">
+                        <div class="stat-item">
+                            <span class="stat-number">30%</span>
+                            <span class="stat-label">Ataques basados en identidad (IBM X-Force 2024)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Gestión de Riesgos -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 3</div>
+                    <h1>¿Qué es la gestión de riesgos en seguridad informática?</h1>
+                    
+                    <div class="risk-management-layout">
+                        <div class="definition-section">
+                            <h2>Definición</h2>
+                            <p>Metodología sistemática para identificar, evaluar, mitigar y monitorear riesgos de seguridad que puedan afectar los activos de información de una organización, incluyendo la evaluación continua de amenazas y vulnerabilidades.</p>
+                        </div>
+                        
+                        <div class="process-section">
+                            <h2>Proceso de Gestión de Riesgos</h2>
+                            <div class="process-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h3>Identificación de Riesgos</h3>
+                                        <p>Reconocer amenazas, vulnerabilidades y activos críticos</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h3>Evaluación del Riesgo</h3>
+                                        <p>Análisis cuantitativo y cualitativo de probabilidad e impacto</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h3>Mitigación del Riesgo</h3>
+                                        <p>Implementación de controles y estrategias de tratamiento</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h3>Control y Adaptación</h3>
+                                        <p>Monitoreo continuo y ajustes según nuevas amenazas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="statistics-section">
+                            <h2>Estadísticas Relevantes 2024</h2>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">61%</div>
+                                    <div class="stat-label">Organizaciones afectadas por ransomware en LATAM</div>
+                                    <div class="stat-source">Fuente: Cybersecurity Ventures 2024</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">$10.5T</div>
+                                    <div class="stat-label">Costo global estimado de cibercriminalidad para 2025</div>
+                                    <div class="stat-source">Fuente: Cybersecurity Ventures</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Controles de Seguridad -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 4</div>
+                    <h1>¿Qué son los controles de seguridad?</h1>
+                    
+                    <div class="controls-layout">
+                        <div class="controls-definition">
+                            <h2>Definición de Controles de Seguridad</h2>
+                            <p>Medidas o salvaguardas diseñadas como producto del análisis de riesgos para contrarrestar, mitigar, prevenir y alertar de posibles fallas de seguridad. Son implementaciones técnicas, administrativas y físicas que protegen los activos de información organizacionales.</p>
+                        </div>
+                        
+                        <div class="iso-controls">
+                            <h2>Marco ISO 27001:2022 - 93 Controles en 4 Categorías</h2>
+                            <div class="controls-grid">
+                                <div class="control-category">
+                                    <div class="category-icon">🏢</div>
+                                    <h3>Controles Organizacionales</h3>
+                                    <div class="category-count">37 controles</div>
+                                    <p>Políticas de seguridad, procedimientos operativos, gestión de riesgos, continuidad del negocio</p>
+                                </div>
+                                <div class="control-category">
+                                    <div class="category-icon">👥</div>
+                                    <h3>Controles de Personas</h3>
+                                    <div class="category-count">8 controles</div>
+                                    <p>Capacitación en seguridad, concienciación, evaluación de personal, términos y condiciones</p>
+                                </div>
+                                <div class="control-category">
+                                    <div class="category-icon">🏗️</div>
+                                    <h3>Controles Físicos</h3>
+                                    <div class="category-count">14 controles</div>
+                                    <p>Seguridad perimetral, control de acceso físico, protección ambiental, equipamiento</p>
+                                </div>
+                                <div class="control-category">
+                                    <div class="category-icon">💻</div>
+                                    <h3>Controles Tecnológicos</h3>
+                                    <div class="category-count">34 controles</div>
+                                    <p>Criptografía, control de acceso lógico, seguridad de aplicaciones, monitoreo</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="implementation-process">
+                            <h2>Proceso de Implementación de Controles</h2>
+                            <div class="process-timeline">
+                                <div class="process-item">
+                                    <div class="process-step">1</div>
+                                    <div class="process-content">
+                                        <h4>Identificación de Deficiencias</h4>
+                                        <p>Análisis de brechas en la seguridad actual</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-step">2</div>
+                                    <div class="process-content">
+                                        <h4>Investigación de Controles</h4>
+                                        <p>Selección de controles apropiados según riesgos</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-step">3</div>
+                                    <div class="process-content">
+                                        <h4>Selección y Justificación</h4>
+                                        <p>Evaluación de efectividad y viabilidad</p>
+                                    </div>
+                                </div>
+                                <div class="process-item">
+                                    <div class="process-step">4</div>
+                                    <div class="process-content">
+                                        <h4>Análisis Costo-Beneficio</h4>
+                                        <p>Evaluación de ROI y impacto organizacional</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Políticas de Seguridad -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 5</div>
+                    <h1>¿Por qué es importante implementar una política de seguridad de la información en una organización?</h1>
+                    <div class="author-credits">
+                        <div class="author-badge primary">Autor: Manuel Enrique Menéndez Olivares</div>
+                    </div>
+                    <div class="policies-layout">
+                        <div class="importance-section">
+                            <h2>Importancia Estratégica</h2>
+                            <p>Los activos más importantes de una organización están en la información y su transaccionalidad. Las políticas de seguridad establecen el marco fundamental para proteger estos activos críticos, definiendo reglas, responsabilidades y procedimientos que deben seguir todos los miembros de la organización.</p>
+                        </div>
+                        
+                        <div class="objectives-section">
+                            <h2>Objetivos Principales de las Políticas</h2>
+                            <div class="objectives-grid">
+                                <div class="objective-card">
+                                    <div class="objective-icon">🛡️</div>
+                                    <h3>Garantizar Triada CIA</h3>
+                                    <p>Proteger Confidencialidad, Integridad y Disponibilidad de la información en transición, almacenamiento y procesamiento</p>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">⚖️</div>
+                                    <h3>Responsabilidades Legales</h3>
+                                    <p>Cumplimiento de regulaciones como GDPR, LOPD, SOX, HIPAA y marcos nacionales de ciberseguridad</p>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">🏆</div>
+                                    <h3>Reputación Organizacional</h3>
+                                    <p>Mantener la confianza de clientes, socios y stakeholders mediante prácticas de seguridad transparentes</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="components-section">
+                            <h2>Componentes Esenciales de las Políticas</h2>
+                            <div class="components-list">
+                                <div class="component-item">
+                                    <h4>📍 Alcance y Aplicabilidad</h4>
+                                    <p>Define claramente qué sistemas, procesos, datos y personas están cubiertos por la política</p>
+                                </div>
+                                <div class="component-item">
+                                    <h4>👥 Roles y Responsabilidades</h4>
+                                    <p>Asignación específica de responsabilidades de seguridad por nivel organizacional</p>
+                                </div>
+                                <div class="component-item">
+                                    <h4>🔧 Medidas de Seguridad</h4>
+                                    <p>Controles técnicos, administrativos y físicos requeridos para proteger la información</p>
+                                </div>
+                                <div class="component-item">
+                                    <h4>📝 Procedimientos de Implementación</h4>
+                                    <p>Pasos detallados y metodologías para implementar efectivamente las políticas</p>
+                                </div>
+                                <div class="component-item">
+                                    <h4>⚠️ Gestión de Incidentes</h4>
+                                    <p>Protocolos de respuesta, escalamiento y recuperación ante violaciones de seguridad</p>
+                                </div>
+                                <div class="component-item">
+                                    <h4>📊 Monitoreo y Revisión</h4>
+                                    <p>Métricas, auditorías y procesos de mejora continua de las políticas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Planes de Continuidad -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 6</div>
+                    <h1>¿Cuál es el objetivo de realizar planes de continuidad en una organización?</h1>
+                    <div class="author-credits">
+                        <div class="author-badge primary">Autor principal: Hernando Arevalo Arevalo</div>
+                    </div>
+                    <div class="continuity-layout">
+                        <div class="hernando-contribution">
+                            <div class="contributor-section">
+                                <div class="contributor-badge">📝 Investigación de Hernando Arevalo Arevalo</div>
+                                <h2>Objetivo Principal de los Planes de Continuidad</h2>
+                                <p>Asegurar que, en caso de un incidente catastrófico, las operaciones o actividades críticas de la organización no se interrumpan permanentemente, minimizando el daño causado por el evento disruptivo y reduciendo significativamente los costos y tiempos de recuperación organizacional.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="components-section">
+                            <h2>Componentes Principales del Plan de Continuidad</h2>
+                            <div class="continuity-components">
+                                <div class="component-card">
+                                    <div class="component-icon">⚡</div>
+                                    <h3>Alta Disponibilidad</h3>
+                                    <p>Sistemas redundantes y arquitecturas resilientes para mantener operación continua con mínima interrupción</p>
+                                    <div class="availability-metric">Objetivo: 99.9%+ uptime</div>
+                                </div>
+                                <div class="component-card">
+                                    <div class="component-icon">🔄</div>
+                                    <h3>Operaciones Continuas</h3>
+                                    <p>Mantenimiento de funciones críticas del negocio durante y después de incidentes disruptivos</p>
+                                    <div class="availability-metric">RTO: Recovery Time Objective</div>
+                                </div>
+                                <div class="component-card">
+                                    <div class="component-icon">🚑</div>
+                                    <h3>Recuperación ante Desastres</h3>
+                                    <p>Restauración rápida y completa de sistemas y datos tras incidentes catastróficos</p>
+                                    <div class="availability-metric">RPO: Recovery Point Objective</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="iso-framework">
+                            <h2>Marco ISO 27001 Anexo A17 - Aspectos de Seguridad de la Información</h2>
+                            <div class="iso-objectives">
+                                <div class="iso-objective">
+                                    <h4>A.17.1 Continuidad de Seguridad de la Información</h4>
+                                    <p>Planificación que considera la importancia crítica de la seguridad en los planes de continuidad, evaluación de riesgos e impacto durante crisis, y implementación de medidas específicas para garantizar la continuidad de la seguridad durante eventos disruptivos graves.</p>
+                                </div>
+                                <div class="iso-objective">
+                                    <h4>A.17.2 Redundancia de Sistemas Clave</h4>
+                                    <p>Identificación y implementación de medidas técnicas y organizacionales para asegurar que sistemas críticos tengan respaldo adecuado, evitando pérdida permanente de disponibilidad y funcionalidad operacional.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="process-phases">
+                            <h2>Fases del Proceso de Continuidad del Negocio</h2>
+                            <div class="phases-timeline">
+                                <div class="phase">
+                                    <div class="phase-number">1</div>
+                                    <div class="phase-content">
+                                        <h4>Gobierno</h4>
+                                        <p>Establecimiento del marco organizacional</p>
+                                    </div>
+                                </div>
+                                <div class="phase">
+                                    <div class="phase-number">2</div>
+                                    <div class="phase-content">
+                                        <h4>BIA</h4>
+                                        <p>Business Impact Analysis</p>
+                                    </div>
+                                </div>
+                                <div class="phase">
+                                    <div class="phase-number">3</div>
+                                    <div class="phase-content">
+                                        <h4>Planes</h4>
+                                        <p>Desarrollo de estrategias específicas</p>
+                                    </div>
+                                </div>
+                                <div class="phase">
+                                    <div class="phase-number">4</div>
+                                    <div class="phase-content">
+                                        <h4>Preparación</h4>
+                                        <p>Training y ejercicios de simulación</p>
+                                    </div>
+                                </div>
+                                <div class="phase">
+                                    <div class="phase-number">5</div>
+                                    <div class="phase-content">
+                                        <h4>Calidad</h4>
+                                        <p>Mejora continua y auditoría</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Conclusiones -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 7: Conclusiones</div>
+                    <h1>Conclusiones del Trabajo Colaborativo</h1>
+                    <div class="conclusions-layout">
+                        <div class="key-findings">
+                            <h2>Hallazgos Principales del Análisis Colaborativo</h2>
+                            <div class="findings-grid">
+                                <div class="finding-card">
+                                    <div class="finding-icon">🔗</div>
+                                    <h3>Implementación Holística Crítica</h3>
+                                    <p>Los pilares de seguridad informática (Confidencialidad, Integridad, Disponibilidad, Autenticación, Autorización y No Repudiación) funcionan como un ecosistema interconectado. Ningún pilar puede implementarse de manera aislada sin comprometer la efectividad del conjunto.</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">📈</div>
+                                    <h3>Madurez Gradual Sostenible</h3>
+                                    <p>La gestión de riesgos debe evolucionar de manera incremental. Los enfoques graduales y sostenibles generan mejor ROI que las implementaciones masivas, especialmente considerando el 61% de ataques ransomware en LATAM.</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">🎯</div>
+                                    <h3>Marcos Internacionales Proveen Guía Probada</h3>
+                                    <p>ISO 27001:2022 con sus 93 controles y NIST CSF 2.0 proporcionan estructuras probadas globalmente. La adopción de estos marcos reduce significativamente el riesgo de implementaciones inadecuadas.</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">⚖️</div>
+                                    <h3>Tecnología Debe Complementar Estrategia</h3>
+                                    <p>Los controles tecnológicos representan solo 34 de los 93 controles de ISO 27001. La seguridad efectiva requiere equilibrio entre tecnología, procesos organizacionales y desarrollo de personas.</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">📊</div>
+                                    <h3>Gobernanza y Métricas Claras</h3>
+                                    <p>Definir roles, políticas y KPIs (MTTD, MTTR, cumplimiento, continuidad) permite decisiones basadas en datos, trazabilidad y mejora continua del programa de seguridad.</p>
+                                </div>
+                                <div class="finding-card">
+                                    <div class="finding-icon">🛡️</div>
+                                    <h3>Resiliencia y Continuidad Operativa</h3>
+                                    <p>Integrar BCP/DRP con objetivos RTO/RPO, pruebas periódicas y redundancias asegura disponibilidad sostenida y rápida recuperación ante incidentes o desastres.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-integration">
+                            <h2>Integración de Marcos y Contribuciones</h2>
+                            <p>El análisis colaborativo demostró que la combinación sinérgica de ISO 27001:2022 con NIST CSF 2.0 (Gobernar, Identificar, Proteger, Detectar, Responder, Recuperar) proporciona una base sólida para la gestión integral de la seguridad informática, especialmente cuando se complementa con planes robustos de continuidad del negocio.</p>
+                        </div>
+                        
+                        <div class="collaborative-insights">
+                            <h2>Insights del Trabajo Colaborativo</h2>
+                            <div class="insights-grid">
+                                <div class="insight-item">
+                                    <div class="insight-author">Edwin Pantoja</div>
+                                    <div class="insight-content">Énfasis en pilares fundamentales y estadísticas de efectividad (99% prevención con MFA)</div>
+                                </div>
+                                <div class="insight-item">
+                                    <div class="insight-author">Manuel Enrique Menéndez</div>
+                                    <div class="insight-content">Visión integral de gestión de riesgos, controles y políticas organizacionales</div>
+                                </div>
+                                <div class="insight-item">
+                                    <div class="insight-author">Hernando Arevalo</div>
+                                    <div class="insight-content">Especialización en continuidad del negocio e implementación de ISO 27001 A17</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="future-trends">
+                            <h2>Tendencias Emergentes 2024-2025</h2>
+                            <div class="trends-list">
+                                <div class="trend-item">
+                                    <span class="trend-icon">🤖</span>
+                                    <span>Inteligencia Artificial en Detección de Amenazas</span>
+                                </div>
+                                <div class="trend-item">
+                                    <span class="trend-icon">🏛️</span>
+                                    <span>Arquitectura Zero Trust como Estándar</span>
+                                </div>
+                                <div class="trend-item">
+                                    <span class="trend-icon">⚛️</span>
+                                    <span>Preparación para Criptografía Post-Cuántica</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="final-message">
+                            <h2>Reflexión Final del Equipo</h2>
+                            <p class="highlight">La seguridad informática trasciende la implementación tecnológica: es un proceso continuo de adaptación organizacional que requiere compromiso integral, desde la alta dirección hasta cada usuario final, fundamentado en marcos internacionales probados y alimentado por la colaboración interdisciplinaria constante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Referencias -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="slide-number">Diapositiva 8: Referencias</div>
+                    <h1>Referencias Académicas y Fuentes</h1>
+                    <div class="references-layout">
+                        <div class="references-list">
+                            <div class="reference-section">
+                                <h3>Marco Normativo Internacional</h3>
+                                <div class="reference-item">
+                                    <p>International Organization for Standardization. (2022). <em>ISO/IEC 27001:2022 Information security management systems — Requirements</em>. ISO. <a href="https://www.iso.org/standard/27001" target="_blank">https://www.iso.org/standard/27001</a></p>
+                                </div>
+                                <div class="reference-item">
+                                    <p>National Institute of Standards and Technology. (2024). <em>NIST Cybersecurity Framework 2.0</em>. NIST. <a href="https://www.nist.gov/cyberframework" target="_blank">https://www.nist.gov/cyberframework</a></p>
+                                </div>
+                            </div>
+
+                            <div class="reference-section">
+                                <h3>Fuentes Estadísticas y Reportes de Industria</h3>
+                                <div class="reference-item">
+                                    <p>Microsoft. (2024). <em>2024 Microsoft Digital Defense Report</em>. Microsoft Corporation. <a href="https://www.microsoft.com/security/business/security-insider/reports/digital-defense-report/" target="_blank">https://www.microsoft.com/security/business/security-insider/reports/digital-defense-report/</a></p>
+                                </div>
+                                <div class="reference-item">
+                                    <p>IBM Security. (2024). <em>IBM X-Force Threat Intelligence Index 2024</em>. IBM Corporation.</p>
+                                </div>
+                                <div class="reference-item">
+                                    <p>Cybersecurity Ventures. (2024). <em>2024 Official Annual Cybercrime Report</em>. Cybersecurity Ventures.</p>
+                                </div>
+                            </div>
+
+                            <div class="reference-section">
+                                <h3>Continuidad del Negocio - Contribución Específica</h3>
+                                <div class="reference-item">
+                                    <p>Gracy, M. (2024, septiembre 27). ISO 27001 and Business Continuity Planning Explained. <em>Sprinto</em>. <a href="https://sprinto.com/blog/iso-27001-business-continuity/" target="_blank">https://sprinto.com/blog/iso-27001-business-continuity/</a> <span class="ref-note">[Fuente consultada por Hernando Arevalo Arevalo]</span></p>
+                                </div>
+                                <div class="reference-item">
+                                    <p>ISO 27002 A17 Seguridad de la Información y Continuidad del Negocio. (s. f.). <em>Norma ISO 27001</em>. <a href="https://www.normaiso27001.es/a17-aspectos-de-seguridad-de-la-informacion-en-la-gestion-de-continuidad-del-negocio/" target="_blank">https://www.normaiso27001.es/a17-aspectos-de-seguridad-de-la-informacion-en-la-gestion-de-continuidad-del-negocio/</a></p>
+                                </div>
+                            </div>
+
+                            <div class="reference-section">
+                                <h3>Literatura Académica Especializada</h3>
+                                <div class="reference-item">
+                                    <p>ISACA. (2024). <em>State of Cybersecurity 2024: Building Cyber Resilience</em>. ISACA International.</p>
+                                </div>
+                                <div class="reference-item">
+                                    <p>(ISC)² Foundation. (2024). <em>2024 Cybersecurity Workforce Study</em>. (ISC)² Foundation.</p>
+                                </div>
+                                <div class="reference-item">
+                                    <p>ENISA. (2024). <em>ENISA Threat Landscape 2024</em>. European Union Agency for Cybersecurity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="acknowledgments">
+                            <h2>Reconocimientos y Contribuciones Específicas</h2>
+                            <div class="contributors-grid">
+                                <div class="contributor-card">
+                                    <h4>Edwin Pantoja Bustos</h4>
+                                    <p>Investigación principal sobre los pilares fundamentales de la seguridad informática, estadísticas de efectividad de MFA y análisis de arquitecturas de autenticación.</p>
+                                </div>
+                                <div class="contributor-card">
+                                    <h4>Manuel Enrique Menéndez Olivares</h4>
+                                    <p>Desarrollo comprehensivo de gestión de riesgos, controles de seguridad según ISO 27001:2022 y políticas organizacionales de seguridad de la información.</p>
+                                </div>
+                                <div class="contributor-card">
+                                    <h4>Hernando Arevalo Arevalo</h4>
+                                    <p>Especialización en planes de continuidad del negocio, investigación específica sobre ISO 27001 Anexo A17 y marcos de resiliencia organizacional.</p>
+                                </div>
+                            </div>
+                            <div class="final-thanks">
+                                <p><strong>Agradecimiento especial</strong> al trabajo colaborativo que permitió integrar múltiples perspectivas expertas para una comprensión holística de la seguridad informática moderna.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal overlay reutilizable -->
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Plantillas de contenido de Edwin (modales) -->
+    <template id="modal-resumen">
+        <div class="modal-section">
+            <h3>Resumen Ejecutivo</h3>
+            <p>La seguridad informática se ha convertido en uno de los pilares estratégicos más importantes para cualquier organización en la era digital actual. Los cinco pilares fundamentales de la seguridad informática —Confidencialidad, Integridad, Disponibilidad, Autenticación y Autorización— proporcionan un marco estructurado y sistemático para proteger los activos de información más críticos de una organización.</p>
+            <p>Esta investigación examina cada pilar, sus tecnologías asociadas, marcos internacionales de referencia y ejemplos prácticos de implementación para organizaciones de cualquier tamaño.</p>
+        </div>
+    </template>
+
+    <template id="modal-introduccion">
+        <div class="modal-section">
+            <h3>1. Introducción a la Seguridad Informática</h3>
+            <h4>1.1 Contexto Actual</h4>
+            <p>Las organizaciones enfrentan un panorama de amenazas cibernéticas sin precedentes. Según IBM X-Force Threat Intelligence Index 2024, los ataques basados en identidad representan el 30% de todos los ciberataques; en Latinoamérica, el 61% de los ataques de ransomware reportados afectaron a organizaciones de todos los tamaños.</p>
+            <h4>1.2 Importancia Estratégica</h4>
+            <ul>
+                <li><strong>Continuidad del negocio:</strong> Evitando interrupciones costosas.</li>
+                <li><strong>Confianza del cliente:</strong> Protección de datos personales y sensibles.</li>
+                <li><strong>Cumplimiento normativo:</strong> Regulaciones como GDPR, SOX, HIPAA.</li>
+                <li><strong>Ventaja competitiva:</strong> Diferenciación por confiabilidad y seguridad.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="modal-pilares">
+        <div class="modal-section">
+            <h3>2. Los Cinco Pilares Fundamentales</h3>
+            <h4>2.1 Confidencialidad</h4>
+            <p>Garantiza acceso solo a actores autorizados; protege contra divulgación no autorizada, intencional o accidental.</p>
+            <p><strong>Tecnologías:</strong> AES (128/192/256), RSA, ECC; TLS/SSL, VPN, S/MIME y PGP.</p>
+            <p><strong>Casos de uso:</strong> TDE en bases de datos, cifrado end-to-end, cifrado previo al almacenamiento en la nube, cifrado de disco completo en móviles.</p>
+            <h4>2.2 Integridad</h4>
+            <p>Asegura que los datos no sean modificados sin autorización, manteniendo precisión y completitud.</p>
+            <p><strong>Tecnologías:</strong> SHA-256/SHA-3/Blake2; firmas digitales, checksums, HMAC.</p>
+            <p><strong>Implementaciones:</strong> Blockchain, control de versiones, logs de auditoría, firma digital de documentos.</p>
+            <h4>2.3 Disponibilidad</h4>
+            <p>Garantiza acceso oportuno a sistemas/datos. Uptime típico: 99.9%, 99.99%, 99.999%.</p>
+            <p><strong>Estrategias:</strong> HA con redundancia, clustering, load balancing; DR con RTO/RPO y regla 3-2-1.</p>
+            <p><strong>Tecnologías:</strong> RAID, virtualización, cloud, CDN.</p>
+            <h4>2.4 Autenticación</h4>
+            <p>Verificación de identidad basada en factores: conocimiento, posesión, inherencia.</p>
+            <p><strong>MFA:</strong> SMS/Voice, apps (Google/Microsoft Authenticator), tokens hardware (YubiKey), biometría.</p>
+            <p><strong>SSO:</strong> SAML 2.0, OAuth 2.0, OpenID Connect. 99% de ataques de cuenta prevenibles con MFA (Microsoft).</p>
+            <h4>2.5 Autorización</h4>
+            <p>Define qué acciones puede realizar un usuario autenticado, con menor privilegio y segregación de funciones.</p>
+            <p><strong>Modelos:</strong> RBAC, MAC, DAC, ABAC.</p>
+            <p><strong>Tech:</strong> Active Directory, LDAP, PAM, IAM.</p>
+        </div>
+    </template>
+
+    <template id="modal-marcos">
+        <div class="modal-section">
+            <h3>3. Marcos Internacionales de Referencia</h3>
+            <h4>3.1 ISO 27001 / 27002</h4>
+            <p>SGSI basado en riesgos. 93 controles en 4 categorías: Organizacional, Personas, Físico, Tecnológico. Ciclo PDCA: Plan, Do, Check, Act.</p>
+            <p><strong>Beneficios:</strong> Confianza del cliente, ventaja competitiva, cumplimiento, reducción de riesgos.</p>
+            <h4>3.2 NIST Cybersecurity Framework 2.0</h4>
+            <p>Seis funciones: Gobernar, Identificar, Proteger, Detectar, Responder, Recuperar. No prescriptivo, basado en riesgos, facilita comunicación.</p>
+            <h4>3.3 COBIT</h4>
+            <p>Gobernanza y gestión de TI. Alineación con objetivos de negocio. Principios: enfoque holístico y separación gobernanza/gestión.</p>
+        </div>
+    </template>
+
+    <template id="modal-implementacion">
+        <div class="modal-section">
+            <h3>4. Implementación Práctica y Mejores Prácticas</h3>
+            <h4>4.1 Estrategias Graduales</h4>
+            <p><strong>Evaluación inicial:</strong> madurez por pilar, brechas y priorización por riesgo; análisis de amenazas, vulnerabilidades e impacto.</p>
+            <p><strong>Fases:</strong> Fundamentos (0–6m): políticas básicas, MFA, backups, capacitación. Consolidación (6–18m): cifrado, monitoreo 24/7, respuesta a incidentes, auditorías. Optimización (18m+): inteligencia de amenazas, automatización, certificaciones, mejora continua.</p>
+            <h4>4.2 Métricas y KPIs</h4>
+            <ul>
+                <li>MTTD, MTTR, Vulnerability Exposure Time, Training Completion Rate.</li>
+                <li>Cost of Data Breach, Regulatory Compliance Score, Customer Trust Index, Business Continuity Time.</li>
+            </ul>
+        </div>
+    </template>
+
+    <template id="modal-casos">
+        <div class="modal-section">
+            <h3>5. Casos de Estudio y Lecciones</h3>
+            <h4>5.1 Institución Financiera</h4>
+            <p><strong>Implementación:</strong> AES-256 en transacciones; blockchain para integridad; infraestructura redundante (99.99%); MFA obligatorio; RBAC granular.</p>
+            <p><strong>Resultados:</strong> −95% incidentes, cumplimiento regulatorio, +40% confianza del cliente.</p>
+            <h4>5.2 Ransomware en Manufactura</h4>
+            <p><strong>Fallas:</strong> sin segmentación, backups sin pruebas, poca capacitación, sin monitoreo 24/7.</p>
+            <p><strong>Correcciones:</strong> Zero Trust, backups offsite con pruebas, programa de concientización, SOC tercerizado.</p>
+        </div>
+    </template>
+
+    <template id="modal-tendencias">
+        <div class="modal-section">
+            <h3>6. Tendencias Futuras y Tecnologías Emergentes</h3>
+            <h4>6.1 IA en Ciberseguridad</h4>
+            <p>Detección de amenazas con ML/DL, SIEM potenciado por IA, respuesta automatizada (SOAR), threat hunting y analítica predictiva.</p>
+            <h4>6.2 Criptografía Post-Cuántica</h4>
+            <p>Riesgo futuro de cómputo cuántico. Preparación: inventario criptográfico, migración planificada y enfoques híbridos.</p>
+            <h4>6.3 Zero Trust Architecture</h4>
+            <p>“Nunca confíes, siempre verifica”: verificación continua, acceso granular por contexto, microsegmentación y monitoreo de comportamiento.</p>
+        </div>
+    </template>
+
+    <template id="modal-recomendaciones">
+        <div class="modal-section">
+            <h3>7. Recomendaciones Estratégicas</h3>
+            <p><strong>PyMEs:</strong> MFA, backups, actualizaciones; nube con seguridad gestionada; capacitación continua; alianzas con MSSP.</p>
+            <p><strong>Grandes organizaciones:</strong> enfoque de ecosistema, inversión en talento, automatización avanzada, liderazgo sectorial.</p>
+            <p><strong>Gobierno:</strong> cumplimiento estricto, protección de infraestructura crítica, cooperación internacional, rol de referencia.</p>
+        </div>
+    </template>
+
+    <template id="modal-conclusiones">
+        <div class="modal-section">
+            <h3>8. Conclusiones y Llamado a la Acción</h3>
+            <p>Los cinco pilares —Confidencialidad, Integridad, Disponibilidad, Autenticación y Autorización— constituyen un marco integral y robusto para proteger activos digitales.</p>
+            <ul>
+                <li>Implementación holística es crítica.</li>
+                <li>Madurez gradual ofrece mejor ROI.</li>
+                <li>ISO 27001 y NIST CSF brindan roadmaps probados.</li>
+                <li>La tecnología debe complementar la estrategia organizacional.</li>
+            </ul>
+            <p><strong>Llamado:</strong> evaluar postura actual, desarrollar roadmap basada en marcos, invertir en personas/procesos/tecnología y medir/mejorar continuamente.</p>
+        </div>
+    </template>
+
+    <!-- Consolidado de aportes de Manuel Enrique en una sola ubicación -->
+    <template id="modal-manuel">
+        <div class="modal-section">
+            <h3>Investigación de Manuel Enrique Menéndez Olivares</h3>
+            <h4>Tabla de Contenido</h4>
+            <ol>
+                <li>Desarrollo de la Actividad (Colaborativa / Foro Colaborativo)
+                    <ol>
+                        <li>Respuestas al cuestionario – (Alcance al Foro colaborativo)</li>
+                    </ol>
+                </li>
+                <li>Referencias Bibliográficas</li>
+            </ol>
+
+            <h3>1. Desarrollo de la Actividad</h3>
+            <h4>1.1. Respuestas al cuestionario – (Alcance al Foro colaborativo)</h4>
+
+            <h5>¿Cuáles son los pilares de la seguridad informática y explicarlos? / What are the pillars of computer security and explain them?</h5>
+            <p>Teniendo en cuenta el vertiginoso avance tecnológico donde el cumplimiento de objetivos conlleva cada vez más a la constante exposición de información, es necesario detenerse y reflexionar respecto a todos aquellos factores que pueden incidir en que el correcto funcionamiento, metas y objetivos no lleguen a cumplirse, esto debido a fallos de seguridad en los sistemas.</p>
+            <p>La teoría general ofrece un componente teórico vasto en adelantarse, mitigar, corregir, controlar y retroalimentar dichos panoramas. Producto de esto, la ciencia de la computación, específicamente la seguridad, establece unos pilares en donde es necesario focalizar todos los esfuerzos que planteen un ambiente cierto y controlado, para garantizar el éxito mediante el blindaje a posibles fallos y/o exposición de información y equipos en las organizaciones.</p>
+            <p>Así las cosas, y teniendo en cuenta la naturaleza de cada organización, los planes de seguridad deben atender estos pilares entendidos como los procesos que garanticen la <strong>confidencialidad</strong> (información sensible física/electrónica), la <strong>autenticidad</strong> (roles y privilegios para control de acceso) y la <strong>integridad</strong> (restricción de manipulación, falsificación u ofuscación de la información). La <strong>disponibilidad</strong> establece la oportunidad de la información cuando es solicitada por medios electrónicos, físicos o procedimentales.</p>
+            <p>Por último, como un nuevo pilar, surge la <strong>no repudiación</strong>, que se resume en el proceso de certificación (acuse de recibido) estableciendo que emisor y receptor son conscientes de la información y aceptan su validez. Esta necesidad emerge ante nuevos mecanismos de suplantación de identidad, alteración de semillas y rompimientos de checksum propios de tecnologías como IA, ingeniería social, espionaje empresarial y plataformas distribuidas.</p>
+            <p><em>“The fundamentals on which the cyber security is dependent are authentication, authorization, nonrepudiation, confidentiality, integrity, and availability (CIA), wherein the CIA remain the most sorted after fundamentals and focused on.”</em> (Padallan, 2019).</p>
+
+            <h5>¿Qué es la gestión de riesgos en seguridad informática? / What is risk management in computer security?</h5>
+            <p>Un riesgo es la probabilidad de que una organización o un entorno informático particular sufra vulnerabilidades por procesos intencionados o espontáneos que causen mal funcionamiento, daño y/o pérdida de recursos informáticos, destacando la información. La gestión de riesgos en seguridad informática ofrece un espectro teórico y tecnológico para atender eventos no planeados configurados en los objetivos iniciales.</p>
+            <p><em>“The likelihood of enduring mischief or misfortune. It alludes to an activity, occasion or a characteristic event that could cause a bothersome result, bringing about a negative effect or outcome.”</em> (Padallan, 2019).</p>
+            <p>La gestión del riesgo ofrece la metodología para satisfacer las demandas de los pilares de seguridad. <em>“Management involves taking risks in a thought-out way by properly assessing, mitigating, and analyzing the risk that is to be taken while undertaking cyber security.”</em> (Padallan, 2019).</p>
+            <p>En la práctica, esta gestión atiende: (1) <strong>Evaluación</strong> del riesgo (clasificar información, identificar peligros y amenazas, analizar fuentes y alcances); (2) <strong>Mitigación</strong> (entender alcance, identificar alternativas, seleccionar e implementar correcciones y nuevas prevenciones); y (3) <strong>Adaptación y control</strong> (cobertura organizacional mediante procesos, procedimientos, normas, leyes y políticas).</p>
+            <p><em>“The management of the risk talks about encountering various vulnerabilities and communicating the risk to the peers... It is also important to characterize information in a certain way.”</em> (Padallan, 2019).</p>
+
+            <h5>¿Qué son los controles de seguridad? / What are security controls?</h5>
+            <p>Surgen como producto del análisis de riesgos, mitigación y corrección establecidos en un estudio de seguridad frente a una vulneración o desde la planeación. Están diseñados para contrarrestar, mitigar, prevenir y/o alertar sobre fallas en la infraestructura y, como centinelas electrónicos, cumplir su función cuando sea necesario.</p>
+            <p>Deben concebirse de manera integral, distribuida y con comunicación transversal en hardware, software y componente humano, siguiendo un proceso de <strong>adquisición</strong>, <strong>implementación</strong>, <strong>monitoreo</strong> y <strong>acción</strong>.</p>
+            <p><em>“This process consists of identifying current or anticipated deficiencies, researching possible controls to address those deficiencies, and planning the steps used to select and then justify the additional controls.”</em> (Goodman, et al., 2008).</p>
+            <p>Considera, entre otros: identificación de deficiencias, lista de posibles controles, selección y justificación de controles, y análisis costo–beneficio (ACB).</p>
+
+            <h5>¿Por qué es importante implementar una política de seguridad de la información en una organización?</h5>
+            <p>Los activos más importantes de una organización están en la información y su transaccionalidad. Además de ser insumo de procesos y generación de recursos, conlleva responsabilidades legales y comerciales, afectando reputación y cumplimiento normativo.</p>
+            <p>Las políticas abordan la protección de <strong>confidencialidad</strong>, <strong>integridad</strong> y <strong>disponibilidad</strong>, así como tratamiento, almacenamiento y transaccionalidad de la información.</p>
+            <p><em>“An information security policy provides rules for the protection of the information assets of the organization... to protect the confidentiality, integrity, and availability of information and information systems, whether in transition, storage or processing through the application of policy, education and training programs, and technology.”</em> (Whitman &amp; Mattord, 2005; citado en Goodman, et al., 2008).</p>
+
+            <h5>¿Cuál es el objetivo de llevar a cabo planes de continuidad en una organización?</h5>
+            <p>La <strong>continuidad</strong> determina la vida de una organización: ninguna es inmune a ataques o desastres. La responsabilidad organizacional, SLAs, aspectos contractuales y legales impiden el abandono de obligaciones tras un evento desastroso.</p>
+            <p>Los planes de continuidad deben establecer máximos y mínimos de afectación, con planes de <strong>contingencia</strong>, <strong>mitigación</strong> y <strong>recuperación de desastres</strong>, garantizando permanencia en el negocio y evitando efectos adversos en ámbitos sociales, culturales, legales y gubernamentales para la organización y terceros.</p>
+
+            <h3>2. Referencias Bibliográficas</h3>
+            <ul>
+                <li>Padallan (2019).</li>
+                <li>Goodman, et al. (2008).</li>
+                <li>Whitman &amp; Mattord (2005).</li>
+            </ul>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
